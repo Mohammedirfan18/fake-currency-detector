@@ -35,21 +35,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
         loadingIndicator.classList.remove('hidden');
         resultContainer.classList.add('hidden');
-
-        fetch('YOUR_BACKEND_API_ENDPOINT', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
+        function showResultData()
+        {
             loadingIndicator.classList.add('hidden');
             resultContainer.classList.remove('hidden');
-            resultText.textContent = "the currency is fake or real will be displayed";//no backend connected so temporary data
-        })
-        .catch(error => {
-            loadingIndicator.classList.add('hidden');
-            alert('An error occurred. Please try again.');
-            console.error('Error:', error);
-        });
+            resultText.textContent = "the currency is fake or real will be displayed";
+        }
+        showResultData();
+    //     fetch('YOUR_BACKEND_API_ENDPOINT', {
+    //         method: 'POST',
+    //         body: formData
+    //     })
+    //     .then(response => response.text())
+    //     .then(data => {
+    //         loadingIndicator.classList.add('hidden');
+    //         resultContainer.classList.remove('hidden');
+    //         resultText.textContent = "the currency is fake or real will be displayed";//no backend connected so temporary data
+    //     })
+    //     .catch(error => {
+    //         loadingIndicator.classList.add('hidden');
+    //         alert('An error occurred. Please try again.');
+    //         console.error('Error:', error);
+    //     });
     });
 });

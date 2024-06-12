@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             loadingIndicator.classList.add('hidden');
             resultContainer.classList.remove('hidden');
-            resultText.textContent = data;
+            resultText.textContent = "the currency is fake or real will be displayed";//no backend connected so temporary data
         })
         .catch(error => {
             loadingIndicator.classList.add('hidden');

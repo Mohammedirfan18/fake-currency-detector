@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             loadingIndicator.classList.add('hidden');
             resultContainer.classList.remove('hidden');
-            resultText.textContent = "the currency is fake or real will be displayed";
+            resultText.textContent = "the currency is fake or real will be displayed here after backend is connected";
         }
         showResultData();
     //     fetch('YOUR_BACKEND_API_ENDPOINT', {
